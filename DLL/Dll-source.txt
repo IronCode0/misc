@@ -1,0 +1,12 @@
+build
+	gcc -c -DBUILD_DLL dll.c
+	gcc -shared -o mydll.dll dll.o -Wl,--out-implib,libmessage.a
+\or\
+	gcc -shared -Os -s -o square.dll square.c
+	gcc -Os -s main.c square.dll
+	
+// https://nullprogram.com/blog/2021/05/31/
+// https://stackoverflow.com/questions/847396/compile-a-dll-in-c-c-then-call-it-from-another-program
+
+https://www.youtube.com/watch?v=PZc1TTeJh9k
+https://www.youtube.com/watch?v=xzA7eBJl1Vk
